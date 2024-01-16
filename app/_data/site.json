@@ -1,0 +1,7 @@
+{
+    "name": "EleventyTen",
+    "authorName": "Craig Webb",
+    "authorUrl": "https://CraigWebbArt.com",
+    "description": "Craig Webb Art – Communications design example website for presentation.",
+    "templateEngineOverride": "njk,md"
+  }

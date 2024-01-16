@@ -1,0 +1,395 @@
+/*! style.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --typography-spacing-vertical: calc(1em + 0.5rem);
+
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/) */
+  font-size: 16px;
+  line-height:1.325;
+  font-family: Roboto, Arial, system-ui, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight:400;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.25rem;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+  main, header, footer {
+    padding:1rem;
+  }
+
+main { 
+  max-width: 700px;
+  margin: 2rem 2rem 0;
+}
+
+
+article > * + * {
+  margin-top: 1em;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+p {
+  font-size: 11pt;
+margin: 0 0 0.5rem;
+
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p.small {
+  font-size: 76%;
+  line-height: 1.375;
+  margin-bottom:1.5rem;
+}
+
+.strong { font-weight:500
+
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+line-height: 1.1;
+}
+
+h1 {
+  color: #3f2121;
+  width: fit-content;
+/*  margin-inline: auto;*/
+font-weight:600;
+}
+
+h1 {
+  font-size: calc(var(--rem) * 2);
+  line-height: var(--typography-spacing-vertical);
+}
+
+h2 {
+  font-size: calc(var(--rem) * 1.75);
+  /*    --typography-spacing-vertical: 2.625rem; */
+  line-height: var(--typography-spacing-vertical);
+}
+
+h3 {
+  font-size: calc(var(--rem) * 1.5);
+  line-height: var(--typography-spacing-vertical);
+  /*      --typography-spacing-vertical: 2.25rem;*/
+}
+
+h4 {
+  --font-size: 1.25rem;
+  font-size: calc(var(--rem) * 1.25);
+  /*  --typography-spacing-vertical: 1.874rem;*/
+  line-height: var(--typography-spacing-vertical);
+}
+
+h5 {
+  font-size: calc(var(--rem) * 1.125);
+  line-height: var(--typography-spacing-vertical);
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: var(--typography-spacing-vertical);
+}
+
+
+a {
+color:#235689;
+
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+input, button, textarea, select, optgroup {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  overflow: auto;
+  white-space: revert;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+:where(pre) {
+  all: revert;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+::marker {
+  content: initial;
+}
+
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+}
+
+/* Sticky-footer Flex Declarations */
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+/* This declaration conflicts with nested sticky footer. See below. Depreciate.
+html { 
+height:100%;
+}
+*/
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+/*! Sticky-footer Flex Declarations */
+/* body seems to require both height and min-height declarations to accommodate both sticky footer flex by itself and also sticky sticky footer with inner sticky flex. (?) */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* height:100%;			 need for sticky footer flex only */
+  min-height: 100%; /* need for sticky footer + inner sticky flex */
+}
+
+footer, header {
+  flex: none;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  align-items: stretch;
+}
+
+main:after {
+  content: " ";
+  display: block;
+  /*margin-top:1.5em;*/
+  height: 0;
+  visibility: hidden;
+}
+
+/* END STICKY FOOTER*/
+
+
+
+
+
+
